@@ -3,7 +3,8 @@ import google.generativeai as genai
 import os
 
 # 1. Fetch API Key securely
-api_key = os.environ.get(AIzaSyAkyKEF0rLlG1fhVkXxiR4X9mIaUnbxg7M)
+# Change line 6 to exactly this:
+api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     st.error("API Key missing! Please set the GEMINI_API_KEY secret/environment variable.")
     st.stop()
